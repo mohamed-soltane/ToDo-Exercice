@@ -4,11 +4,11 @@ import React, { Component,Fragment } from 'react';
 class Lists extends Component {
     
     //Render Course Item
-    renderList = () => {
+    renderList = (props) => {
         return (
-            <li>
+            <li className="li-class">
                 <span>{this.props.todos}</span> 
-                <button>Delete List</button>
+                <button onClick={() => {this.props.deleteList(this.props.index)}}>Delete List</button>
             </li>
         )
     }
